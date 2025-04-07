@@ -1,20 +1,30 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
+
 package ejerciciociclista1;
 
-/**
- *
- * @author ana judith
- */
+
 public class EjercicioCiclista1 {
 
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String[] args) {
-        // TODO code application logic here
+       Equipo equipo = new Equipo(" Equipo Aguilas ", " Perú ");
+
+        Velocista velocista = new Velocista(540.5, 1, " Lucas ");
+        velocista.setVelocidadPromedioSprint(56.0);
+        velocista.setTiempoAcumulado(120);
+
+        Escalador escalador = new Escalador(4.6f, 9.0f, 4, " Daniel ");
+        escalador.setTiempoAcumulado(130);
+
+        Contrarrelojista contrarrelojista = new Contrarrelojista(80.0, 2, " Juan ");
+        contrarrelojista.setTiempoAcumulado(115);
+
+        equipo.añadirCiclista(velocista);
+        equipo.añadirCiclista(escalador);
+        equipo.añadirCiclista(contrarrelojista);
+        equipo.calcularTiempoTotal();
+        equipo.listarNombresCiclistas(); 
+
+        System.out.println(" Tiempo total del equipo: " + equipo.getTiempoTotalEquipo());
     }
     
 }
