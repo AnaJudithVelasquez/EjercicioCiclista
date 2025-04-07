@@ -7,7 +7,7 @@ public abstract class Ciclista {
     
     private int identificador;
     private String nombre;
-    private int tiempoAcomulado = 0;
+    private int tiempoAcumulado = 0;
 
     public Ciclista(int identificador, String nombre) {
         this.identificador = identificador;
@@ -31,20 +31,23 @@ public abstract class Ciclista {
         this.nombre = nombre;
     }
 
-    public int getTiempoAcomulado() {
-        return tiempoAcomulado;
+    public int getTiempoAcumulado() {
+        return tiempoAcumulado;
     }
 
-    public void setTiempoAcomulado(int tiempoAcomulado) {
-        this.tiempoAcomulado = tiempoAcomulado;
+    public void setTiempoAcumulado(int tiempoAcumulado) {
+        this.tiempoAcumulado = tiempoAcumulado;
     }
 
   
-   protected abstract String imprimirTipo();
+   public abstract String imprimirTipo();
    
    public void mostrarDatos(){
    
-       System.out.println("ID: " + identificador + ", Nombre: " + nombre + ", Tiempo" + tiempoAcomulado);
-   }
+        System.out.println("ID: " + identificador);
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Tiempo acumulado: " + tiempoAcumulado + " min");
+    }
+ }
     
-}
+

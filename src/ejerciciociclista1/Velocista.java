@@ -5,12 +5,11 @@ package ejerciciociclista1;
  class Velocista extends Ciclista{
     
   private double potenciaPromedio;
-  private double potenciaPromedioSprint;
+  private double velocidadPromedioSprint;
 
-    public Velocista(double potenciaPromedio, double potenciaPromedioSprint, int identificador, String nombre) {
+    public Velocista(double potenciaPromedio, int identificador, String nombre) {
         super(identificador, nombre);
         this.potenciaPromedio = potenciaPromedio;
-        this.potenciaPromedioSprint = potenciaPromedioSprint;
     }
 
     public double getPotenciaPromedio() {
@@ -21,18 +20,25 @@ package ejerciciociclista1;
         this.potenciaPromedio = potenciaPromedio;
     }
 
-    public double getPotenciaPromedioSprint() {
-        return potenciaPromedioSprint;
+    public double getVelocidadPromedioSprint() {
+        return velocidadPromedioSprint;
     }
 
-    public void setPotenciaPromedioSprint(double potenciaPromedioSprint) {
-        this.potenciaPromedioSprint = potenciaPromedioSprint;
+    public void setVelocidadPromedioSprint(double velocidadPromedioSprint) {
+        this.velocidadPromedioSprint = velocidadPromedioSprint;
     }
+
   
   @Override
    public String imprimirTipo(){
        return getNombre() + "Es un velocista";
        }
+   
    public void imprimirDatos() {
-       }
+        super.mostrarDatos();
+        System.out.println("Potencia promedio: " + potenciaPromedio + " W");
+        System.out.println("Velocidad promedio sprint: " + velocidadPromedioSprint + " km/h");
+    }
+       
  }
+ 
