@@ -10,8 +10,9 @@ public class Equipo {
     
     private String nombreEquipo;
     private String pais;
-    private static int tiempoTotalEquipo = 0;
     private ArrayList<Ciclista> ciclistas;
+    private static int tiempoTotalEquipo = 0;
+   
 
     public Equipo(String nombreEquipo, String pais) {
         this.nombreEquipo = nombreEquipo;
@@ -50,12 +51,13 @@ public class Equipo {
  
      
     protected void imprimirDatosEquipo(){
-        System.out.println("Equipo: " + nombreEquipo);
-        System.out.println("País: " + pais);
-        System.out.println("Tiempo total del equipo: " + tiempoTotalEquipo + " min");
+        System.out.println(" Equipo: " + nombreEquipo);
+        System.out.println("Pais: " + pais);
+        System.out.println(" Tiempo total del equipo: " + tiempoTotalEquipo + " min");
     }
     
     protected void listarNombresCiclistas(){
+        System.out.println(" Los cliclistas del equipo : "+ nombreEquipo + " son :");
         for (Ciclista ciclista : ciclistas)
             System.out.println(" - " + ciclista.getNombre());
             
@@ -84,29 +86,28 @@ public class Equipo {
         Equipo.tiempoTotalEquipo = total;
         
     }
-    void buscarCiclista() {
+    
+      void buscarCiclista() {
      
-        System.out.println(" Indica el indentificador del cliclista a buscar ");
+        System.out.print(" Indica el identificador del ciclista a buscar: ");
+        int idBuscado = sc.nextInt();
 
-        int ciclista = sc.nextInt();
+        boolean encontrado = false;
 
-        int control= 0;
-        boolean buscar = false;
-
-        for (int i = 0; i < ciclistas.size(); i++) {
-            if (ciclista == ciclistas.get(i).getIdentificador()) {
-              control = i;
-                buscar = true;
+        for (Ciclista c : ciclistas) {
+            if (c.getIdentificador() == idBuscado) {
+                System.out.println("El cclista buscado es ");
+                c.imprimirDatos(); 
+                encontrado = true;
+                break;
             }
         }
 
-        if ( buscar == true) {
-            System.out.println("El nombre del ciclista es: " + ciclistas.get(control).getNombre());
-            
-        } else {
-            System.out.println("El ciclsita no esta registrado");
+        if (!encontrado) {
+            System.out.println("El ciclista no está registrado.");
         }
     }
 }
+
 
 
