@@ -31,14 +31,14 @@ package ejerciciociclista1;
   
   @Override
    public String imprimirTipo(){
-       return getNombre() + "Es un velocista";
+       return getNombre() + " Es un velocista";
        }
    
   @Override
    public void imprimirDatos() {
-        super.mostrarDatos();
-        System.out.println("Potencia promedio: " + potenciaPromedio + " W");
-        System.out.println("Velocidad promedio sprint: " + velocidadPromedioSprint + " km/h");
+        super.imprimirDatos();
+        System.out.println(" Potencia promedio: " + potenciaPromedio + " W");
+        System.out.println(" Velocidad promedio sprint: " + velocidadPromedioSprint + " km/h");
     }
        
  }

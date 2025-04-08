@@ -6,8 +6,8 @@ package ejerciciociclista1;
 
  class Escalador extends Ciclista {
    
-    private float aceleracionPromedio;
-    private float gradoRampa;
+    private float gradoRampa;    private float aceleracionPromedio;
+
 
     public Escalador(float aceleracionPromedio, float gradoRampa, int identificador, String nombre) {
         super(identificador, nombre);
@@ -33,13 +33,13 @@ package ejerciciociclista1;
     
     @Override
     public String imprimirTipo(){
-       return getNombre() + "Es un Escalador";
+       return getNombre() + " Es un Escalador";
        }
     @Override
     public void imprimirDatos() {
          super.imprimirDatos();
-        System.out.println("Aceleración Subida: " + aceleracionPromedio + " m/s²");
-        System.out.println("Grado de Rampa: " + gradoRampa + "°");
+        System.out.println("Aceleracion Subida: " + aceleracionPromedio + " m/s^2");
+        System.out.println("Grado de Rampa: " + gradoRampa + " grados ");
         System.out.println(imprimirTipo());
        }
     
