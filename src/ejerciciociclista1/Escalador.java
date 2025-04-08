@@ -35,7 +35,12 @@ package ejerciciociclista1;
     public String imprimirTipo(){
        return getNombre() + "Es un Escalador";
        }
+    @Override
     public void imprimirDatos() {
+         super.imprimirDatos();
+        System.out.println("Aceleración Subida: " + aceleracionPromedio + " m/s²");
+        System.out.println("Grado de Rampa: " + gradoRampa + "°");
+        System.out.println(imprimirTipo());
        }
     
 }

@@ -34,6 +34,7 @@ package ejerciciociclista1;
        return getNombre() + "Es un velocista";
        }
    
+  @Override
    public void imprimirDatos() {
         super.mostrarDatos();
         System.out.println("Potencia promedio: " + potenciaPromedio + " W");

@@ -48,6 +48,10 @@ public abstract class Ciclista {
         System.out.println("Nombre: " + nombre);
         System.out.println("Tiempo acumulado: " + tiempoAcumulado + " min");
     }
+
+    void imprimirDatos() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
  }
     
 
