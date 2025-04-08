@@ -23,8 +23,12 @@ package ejerciciociclista1;
     public String imprimirTipo(){
        return getNombre() + "Es un Contrarrelojista";
        }
+    @Override 
     public void imprimirDatos() {
+        super.imprimirDatos();
+        System.out.println("Velocidad Máxima: " + velocidadMaxima + " km/h");
+        System.out.println(imprimirTipo());
+    }
        }
     
     
-}

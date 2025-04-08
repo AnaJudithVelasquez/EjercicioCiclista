@@ -2,8 +2,11 @@
 package ejerciciociclista1;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Equipo {
+    
+    static Scanner sc = new Scanner(System.in);
     
     private String nombreEquipo;
     private String pais;
@@ -37,7 +40,7 @@ public class Equipo {
     }
 
     protected void setTiempoTotalEquipo(int tiempoTotalEquipo) {
-        this.tiempoTotalEquipo = tiempoTotalEquipo;
+        Equipo.tiempoTotalEquipo = tiempoTotalEquipo;
     }
     
     protected void añadirCiclista(Ciclista ciclista){
@@ -53,12 +56,9 @@ public class Equipo {
     }
     
     protected void listarNombresCiclistas(){
-        for (int i = 0; i < ciclistas.size(); i++) {
-            Ciclista ciclista = ciclistas.get(i);
-            ciclista.mostrarDatos();
-            System.out.println("Tipo: " + ciclista.imprimirTipo());
-            System.out.println("Tiempo acumulado: " + ciclista.getTiempoAcumulado() + "\n");
-        }
+        for (Ciclista ciclista : ciclistas)
+            System.out.println(" - " + ciclista.getNombre());
+            
     }
     
     protected void imprimirDatosCiclistasPorld(int identificador){
@@ -82,7 +82,31 @@ public class Equipo {
             total += ciclista.getTiempoAcumulado();
         }
         Equipo.tiempoTotalEquipo = total;
+        
     }
-   
-    
+    void buscarCiclista() {
+     
+        System.out.println(" Indica el indentificador del cliclista a buscar ");
+
+        int ciclista = sc.nextInt();
+
+        int control= 0;
+        boolean buscar = false;
+
+        for (int i = 0; i < ciclistas.size(); i++) {
+            if (ciclista == ciclistas.get(i).getIdentificador()) {
+              control = i;
+                buscar = true;
+            }
+        }
+
+        if ( buscar == true) {
+            System.out.println("El nombre del ciclista es: " + ciclistas.get(control).getNombre());
+            
+        } else {
+            System.out.println("El ciclsita no esta registrado");
+        }
+    }
 }
+
+
