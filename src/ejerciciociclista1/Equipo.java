@@ -52,14 +52,14 @@ public class Equipo {
      
     protected void imprimirDatosEquipo(){
         System.out.println(" Equipo: " + nombreEquipo);
-        System.out.println("Pais: " + pais);
+        System.out.println(" Pais: " + pais);
         System.out.println(" Tiempo total del equipo: " + tiempoTotalEquipo + " min");
     }
     
     protected void listarNombresCiclistas(){
         System.out.println(" Los cliclistas del equipo : "+ nombreEquipo + " son :");
         for (Ciclista ciclista : ciclistas)
-            System.out.println(" - " + ciclista.getNombre());
+            System.out.println(" - " + ciclista.getIdentificador()+ ciclista.getNombre());
             
     }
     
@@ -96,7 +96,7 @@ public class Equipo {
 
         for (Ciclista c : ciclistas) {
             if (c.getIdentificador() == idBuscado) {
-                System.out.println("El cclista buscado es ");
+                System.out.println("El ciclista buscado es ");
                 c.imprimirDatos(); 
                 encontrado = true;
                 break;

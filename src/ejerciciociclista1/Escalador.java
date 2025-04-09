@@ -38,8 +38,8 @@ package ejerciciociclista1;
     @Override
     public void imprimirDatos() {
          super.imprimirDatos();
-        System.out.println("Aceleracion Subida: " + aceleracionPromedio + " m/s^2");
-        System.out.println("Grado de Rampa: " + gradoRampa + " grados ");
+        System.out.println(" Aceleracion Subida: " + aceleracionPromedio + " m/s^2 ");
+        System.out.println(" Grado de Rampa: " + gradoRampa + " grados ");
         System.out.println(imprimirTipo());
        }
     
