@@ -1,10 +1,7 @@
-
 package ejerciciociclista1;
 
-//import java.util.ArrayList;
-
 public abstract class Ciclista {
-    
+
     private int identificador;
     private String nombre;
     private int tiempoAcumulado = 0;
@@ -13,7 +10,6 @@ public abstract class Ciclista {
         this.identificador = identificador;
         this.nombre = nombre;
     }
-
 
     public int getIdentificador() {
         return identificador;
@@ -39,11 +35,10 @@ public abstract class Ciclista {
         this.tiempoAcumulado = tiempoAcumulado;
     }
 
-  
-   public abstract String imprimirTipo();
-   
-   public void mostrarDatos(){
-   
+    public abstract String imprimirTipo();
+
+    public void mostrarDatos() {
+
         System.out.println(" ID: " + identificador);
         System.out.println(" Nombre: " + nombre);
         System.out.println("Tiempo acumulado: " + tiempoAcumulado + " min");
@@ -51,7 +46,5 @@ public abstract class Ciclista {
 
     void imprimirDatos() {
         mostrarDatos();
- }
+    }
 }
-    
-
