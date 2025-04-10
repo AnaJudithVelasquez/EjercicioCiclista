@@ -28,6 +28,7 @@ package ejerciciociclista1;
         super.imprimirDatos();
         System.out.println("Velocidad Maxima: " + velocidadMaxima + " km/h");
         System.out.println(imprimirTipo());
+        System.out.println("");
     }
        } 
     
